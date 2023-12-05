@@ -10,9 +10,9 @@ G d--? s+: a+++ C+++$ UL++++$ P--->$ L++++$ !E--- W+++$ N* !o K--? w O+ M-- V PS
 
 ## Solution
 
-So, well after short googling i found something called [Geek Code](https://en.wikipedia.org/wiki/Geek_Code) which is a way for self-identified geeks to describe their interests, skills, and various aspects of their personalities in a concise and standardized format. It was created by Robert A. Hayden in 1993 as a form of shorthand to communicate a person's geeky attributes in a humorous and coded manner. The Geek Code consists of a series of letters and symbols, each representing a different category.
+Following a brief search, I stumbled upon something known as the [Geek Code](https://en.wikipedia.org/wiki/Geek_Code)  a system allowing self-identified geeks to succinctly portray their interests, skills, and personality traits in a standardized format. Originating in 1993 by Robert A. Hayden, the Geek Code serves as a whimsical and coded means of communicating one's geeky attributes through a series of letters and symbols, each representing a distinct category.
 
-With this information i searched for an online tool which enables me to decode the provided geek code. The one i used was [this](https://www.dcode.fr/geek-code). On the left it display the various properties and after a short eye scan i found the PGP property which tells us the name of the described person: I am Philip Zimmerman. So the flag is obviously: `HV23{Philip Zimmerman}`
+Armed with this knowledge, I sought an online tool capable of deciphering the provided Geek Code. I opted for [this particular tool](https://www.dcode.fr/geek-code), where the left side displays various properties. Upon a quick glance, I zeroed in on the PGP property, revealing the individual's name: Philip Zimmerman.
 
 ![Screenshot](screenshot.png)
 

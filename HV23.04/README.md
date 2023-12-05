@@ -6,26 +6,24 @@ Santa has heard that some kids appreciate a video game as a christmas gift. He w
 
 ## Solution
 
-As always when playing CTF the more we know and informations we have on hand the faster we can solve the challenge without going down the completely wrong path. So when running the `File` command on the bowser.elf file. We can see that it in deed is a ELF-64-bit executable and not just a distraction.
+In the realm of CTF challenges, the more information we gather upfront, the quicker we can navigate without veering off course. Upon running the `File` command on the `bowser.elf` file, it revealed itself as a 64-bit ELF executable, dispelling any initial misdirection.
 
 ![File command output](assets/file-command.png)
 
 ### Loading the file into Ghidra
 
-For further research and decompilation I decided to load the file into Ghidra to get the decompiled output of the functions. After some short clicking around i found the main function which has a an array with 73 elements inside. 
+To delve deeper into the challenge, I opted to load the file into Ghidra for comprehensive research and decompilation. After some navigation, I pinpointed the main function housing an array with 73 elements.
 
-If you have a look at `line:91` we can see that it is a simple bitwise operation done to get the characters out of the flag. So we need to find a way to reverse this to get the flag out.
+A closer look at `line:91` unveiled a straightforward bitwise operation applied to extract flag characters. The task at hand became clear – reverse this operation to unveil the flag.
 
 ![Ghidra 1](assets/ghidra-1.png)
 ![Ghidra 2](assets/ghidra-2.png)
 
-### What is the encryption?
+### Understanding the encryption
+The encryption technique employed is a simple bitwise NOT operation, also known as bitwise complement or bitwise negation. This process entails applying the bitwise NOT (~) operator to each bit of the data being encrypted. In the realm of characters or bytes, this operation inverts the bits, transforming each 0 to 1 and vice versa.
 
-> A simple bitwise NOT operation encryption, often referred to as bitwise complement or bitwise negation, involves applying the bitwise NOT (~) operator to each bit of the data being encrypted. In the context of characters or bytes, this operation inverts the bits, changing each 0 to 1 and each 1 to 0.
-
-### Writing a short python script
-
-As we now know that the flag can be retrieved by applying bitwise negation to the array. We can write a short python script which will get us the flag in the end.
+### Crafting a Python script
+With the realization that the flag can be retrieved by applying bitwise negation to the array, a concise Python script was crafted to unveil the flag:
 
 ```python
 def decrypt_flag(encrypted_flag):
@@ -52,11 +50,9 @@ flag = [
 print(decrypt_flag(''.join([chr(value) for value in flag])))
 ```
 
-The decrypt_flag function takes an encrypted flag as input, which is assumed to be a string. It iterates through each character in the input string, applying a series of bitwise operations to invert its bits. The result is then converted back to a character. This process is repeated for each character in the input, and the decrypted characters are stored in a list.
+In this Python script, the `decrypt_flag` function takes an encrypted flag as input (assumed to be a string), iterates through each character, and applies a series of bitwise operations to invert its bits. The result is then converted back to a character. The decrypted characters are stored in a list, and the final decrypted flag is obtained by joining these characters.
 
-The flag array contains the hexadecimal values of the encrypted flag, which were obtained by applying the bitwise NOT operation to the original flag. The Python code then calls the decrypt_flag function with the characters obtained from converting the hexadecimal values in the flag array back to characters. The decrypted characters are joined together to form the final decrypted flag.
-
-In the output below, you will see the decrypted flag printed to the console.
+In the script's output, you'll observe the decrypted flag printed to the console.
 
 ![Python script output](assets/console-output.png)
 
@@ -65,4 +61,3 @@ In the output below, you will see the decrypted flag printed to the console.
 ```
 HV23{You_Have_Saved_the_Princess}
 ```
-

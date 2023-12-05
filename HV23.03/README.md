@@ -8,7 +8,9 @@ While contemplating the grille and turning some burgers, Santa decided to send a
 
 ## Solution
 
-After googling what a grille cipher is which i found by doing a google image reverse search of the provided image in the description of the challenge. I read the [wikipedia article](https://en.wikipedia.org/wiki/Grille_(cryptography)). And started with trial and error in gimp because i knew the beginning must be `HV23{` but what i didn't realise, was that it can also be rotated counter clockwise. Shortly after i realised that the letter `m` must also be circled and so it was pretty easy to solve. 
+Upon conducting a Google image reverse search of the provided image in the challenge description, I discovered the concept of a grille cipher. Delving into the details, I perused the [Wikipedia article](https://en.wikipedia.org/wiki/Grille_(cryptography)) to grasp the intricacies of this cryptographic technique.
+
+Armed with this newfound knowledge, I embarked on a trial-and-error exploration in GIMP. Recognizing that the plaintext should begin with `HV23{`, I initially overlooked the possibility of a counter-clockwise rotation. It dawned on me shortly afterward that the letter `m` also required encircling, simplifying the solution considerably.
 
 ![Grille in gimp 1](assets/grill-gimp-1.png)
 ![Grille in gimp 2](assets/grill-gimp-2.png)

@@ -6,10 +6,14 @@ The Northern Lights appeared at exceptionally low latitudes this year due to the
 
 ## Solution
 
-Well well well this for me personaly was one kind of a journey. First of all I searched google about enhancing videos of night skyies. Soon i found ways and tools to improve the quality of astro photography and decided to extract all frames as png from the mp4 video. Luckily there are a milion tools availabe online to do that. One tool i found to use to stack those frames is called [Siril](https://siril.org/) and thank good it was available for linux. So i installed it and loaded all the frames into it and executed the stacking button. This worked and i got the following image providing me with the flag.
+Well, well, well, this turned out to be quite the personal journey for me. It all started with a Google search on enhancing videos of the night sky. Soon enough, I stumbled upon various methods and tools designed to elevate the quality of astrophotography. Motivated, I decided to extract all frames as PNG from the MP4 video. Fortunately, the internet is flooded with a plethora of tools for this task, and I quickly found one that suited my needs.
+
+To stack those frames, I opted for a tool called [Siril](https://siril.org/), and luckily, it was available for Linux. After installation, I loaded all the frames into Siril and hit the stacking button. Voila! It worked like a charm, and the resulting image revealed the flag.
 
 ![Siril stacked images](assets/siril.png)
 
 ## Flag
 
+```
 HV23{M4gn3t0sph3r1c_d1sturb4nc3}
+```
