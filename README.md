@@ -9,7 +9,7 @@ Like last year, I decided to play in the HackVent CTF, but this time I wanted to
 5. [[HV23.05] Aurora](HV23.05/README.md)
 6. [[HV23.06] Santa should use a password manager](HV23.06/README.md)
 7. [[HV23.07] The golden book of Santa](HV23.07/README.md)
-9. [[HV23.09] Passage encryption](HV23.08/README.md)
+9. [[HV23.09] Passage encryption](HV23.09/README.md)
 
 
 ## What is HackVent?
